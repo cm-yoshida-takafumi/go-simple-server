@@ -9,6 +9,7 @@ if [[ "$VERSION" = "" ]]; then
     VERSION="${TAG_BRANCH}-${TAG_DATE}"
 fi
 
-GOOS=linux GOARCH=amd64 go build -ldflags "-X github.com/zephiransas/go-simple-server/version.version=$VERSION" -o server
+#GOOS=linux GOARCH=amd64 go build -ldflags "-X github.com/zephiransas/go-simple-server/version.version=$VERSION" -o server
+go build -ldflags "-X github.com/zephiransas/go-simple-server/version.version=$VERSION" -o server
 ret=$?
 [[ $ret -eq 0 ]] && echo $VERSION
