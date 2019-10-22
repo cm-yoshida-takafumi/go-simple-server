@@ -2,4 +2,4 @@
 
 set -xeo pipefail
 
-/app/server
+systemctl restart go-simple-server
