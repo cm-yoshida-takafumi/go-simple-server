@@ -7,3 +7,10 @@ phases:
   build:
     commands:
       - ./build.sh
+#      - ./create_deployment.sh
+
+artifacts:
+  files:
+    - appspec.yml
+    - server
+    - start.sh
